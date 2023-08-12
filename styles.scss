@@ -1,0 +1,335 @@
+$bright-blue: hsl(220, 98%, 61%);
+$check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+$very-light-grey: hsl(0, 0%, 98%);
+$very-light-grayish-blue: hsl(236, 33%, 92%);
+$light-grayish-blue: hsl(233, 11%, 84%);
+$dark-grayish-blue: hsl(236, 9%, 61%);
+$very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+$very-dark-blue: hsl(235, 21%, 11%);
+$very-dark-blue-2: hsl(234, 21%, 11%);
+$light-grayish-blue: hsl(234, 39%, 85%);
+$light-grayish-blue-hover: hsl(236, 33%, 92%);
+$dark-grayish-blue: hsl(234, 11%, 52%);
+$very-dark-grayish-blue: hsl(233, 14%, 35%);
+$very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+
+$body-font-size: 18px;
+$body-font-family: "Josefin Sans", sans-serif;
+
+//--------------------------MIXINS---------------------------
+@mixin colorScheme($text, $background) {
+  color: $text;
+  background-color: $background;
+}
+
+@mixin background() {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+//--------------------------------BODY-------------------------//
+body {
+  width: 100vw;
+  margin-left: -1px;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  background-color: $very-light-grayish-blue;
+  @include colorScheme(black, $very-light-grayish-blue);
+}
+
+.dark {
+  @include colorScheme($very-light-grey, $very-dark-blue);
+
+  header {
+    background-image: url("./images/bg-mobile-light.jpg");
+  }
+
+  .todo,
+  form,
+  input,
+  aside {
+    @include colorScheme($very-light-grey, $very-dark-grayish-blue-2);
+
+    ::placeholder {
+      color: $very-light-grey;
+    }
+  }
+
+  button:not(.do) {
+    color: $dark-grayish-blue;
+  }
+}
+
+//-------------------------------HEADER--------------------------//
+header {
+  background-image: url("./images/bg-mobile-light.jpg");
+  background-size: cover;
+  @include background();
+  margin-top: -20px;
+  height: 24vh;
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    max-width: 38rem;
+  }
+
+  h1 {
+    color: $very-light-grey;
+    font-family: $body-font-family;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    margin-top: 2.5rem;
+  }
+
+  img {
+    height: 1.5rem;
+    width: 2rem;
+  }
+
+  form {
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    margin: auto;
+    width: 80%;
+    border-radius: 0.5rem;
+    display: flex;
+    position: relative;
+    bottom: 2rem;
+    max-width: 38rem;
+
+    button {
+      margin-right: 0.5rem;
+    }
+
+    input {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      padding: 0%;
+      margin: 0;
+      text-align: left;
+      font-family: inherit;
+      font-size: inherit;
+      width: 100%;
+    }
+  }
+}
+
+// --------------------------------TODO LIST-------------------------------
+.todo {
+  background-color: white;
+  width: 88vw;
+  max-width: 38rem;
+  margin: auto;
+  border-radius: 6px;
+  font-size: 14px;
+  position: relative;
+  bottom: 3rem;
+
+  .main-item {
+    min-height: 3.5rem;
+    height: fit-content;
+    border-bottom: 1px solid $dark-grayish-blue;
+    margin-left: -2.5rem;
+    cursor: move;
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .do {
+    margin-left: 1rem;
+  }
+
+  .checked {
+    .do {
+      background: url("images/icon-check.svg"),
+        linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+      @include background();
+    }
+    text-decoration: line-through;
+    color: $dark-grayish-blue;
+  }
+
+  .delete {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .filters {
+    text-transform: capitalize;
+    display: none;
+  }
+
+  #clearCompleted,
+  .items > p {
+    text-transform: capitalize;
+    height: fit-content;
+  }
+}
+
+//---------------------ITEMS--------------------------------
+.items {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+
+  button,
+  p {
+    color: $dark-grayish-blue;
+    margin: 1rem;
+    position: relative;
+    bottom: 25%;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+}
+
+// ----------------------GENERIC ------------------------------
+.do {
+  border: 1px solid $dark-grayish-blue;
+  outline: none;
+  background-color: transparent;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  display: inline;
+  margin-left: 1rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: inherit;
+}
+
+.do:focus,
+.do:active,
+.do:hover {
+  border: 2px solid blue;
+}
+
+.active {
+  color: $bright-blue !important;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+//-----------------------------------------ASIDE-----------------
+
+aside {
+  background-color: white;
+  width: 88vw;
+  min-width: 88vw;
+  margin: auto;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 3rem;
+
+  button {
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: $very-dark-grayish-blue;
+    margin: 0.5rem;
+  }
+
+  :hover:not(.active) {
+    color: $bright-blue;
+    opacity: 0.8;
+    border: none !important;
+  }
+}
+
+//-------------------------FOOTER----------------
+footer {
+  display: flex;
+  justify-content: center;
+  color: $dark-grayish-blue;
+  position: relative;
+  bottom: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .dark {
+    header {
+      background-image: url("./images/bg-desktop-dark.jpg");
+    }
+  }
+
+  .light {
+    header {
+      background-image: url("./images/bg-desktop-light.jpg");
+    }
+  }
+
+  header {
+    height: 35vh;
+
+    section {
+      margin: auto;
+      position: relative;
+      top: 2rem;
+    }
+
+    form {
+      padding-right: 0;
+      padding-left: 0;
+      margin-top: 4rem;
+
+      .do {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .todo {
+    .main-item {
+      font-size: 18px;
+
+      button:not(.do) {
+        display: none;
+      }
+    }
+  }
+
+  .visible {
+    display: initial !important;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+      integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>To Do</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1>todo</h1>
+        <button id="themeSwitcher">
+          <img src="./images/icon-moon.svg" alt="a moon" />
+        </button>
+      </section>
+      <form action="">
+        <button type="button" class="do" disabled></button>
+        <input
+          type="text"
+          name="todo"
+          id="todo"
+          placeholder="Create a new todo..."
+        />
+      </form>
+    </header>
+    <main class="todo">
+      <ul></ul>
+      <div class="items">
+        <p><span id="itemsLeft"></span> items left</p>
+        <div class="filters invisible">
+          <button data-filter="all" class="active">all</button>
+          <button data-filter="active">active</button>
+          <button data-filter="completed">completed</button>
+        </div>
+        <button id="clearCompleted">clear completed</button>
+      </div>
+    </main>
+    <aside class="flex">
+      <button data-filter="all" class="active">all</button>
+      <button data-filter="active">active</button>
+      <button data-filter="completed">completed</button>
+    </aside>
+    <footer><p>Drag and drop to reoder list</p></footer>
+  </body>
+</html>

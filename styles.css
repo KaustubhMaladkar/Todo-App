@@ -1,0 +1,273 @@
+body {
+  width: 100vw;
+  margin-left: -1px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  background-color: hsl(236, 33%, 92%);
+  color: black;
+  background-color: hsl(236, 33%, 92%);
+}
+
+.dark {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(235, 21%, 11%);
+}
+.dark header {
+  background-image: url("./images/bg-mobile-light.jpg");
+}
+.dark .todo,
+.dark form,
+.dark input,
+.dark aside {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(237, 14%, 26%);
+}
+.dark .todo ::-moz-placeholder, .dark form ::-moz-placeholder, .dark input ::-moz-placeholder, .dark aside ::-moz-placeholder {
+  color: hsl(0, 0%, 98%);
+}
+.dark .todo ::placeholder,
+.dark form ::placeholder,
+.dark input ::placeholder,
+.dark aside ::placeholder {
+  color: hsl(0, 0%, 98%);
+}
+.dark button:not(.do) {
+  color: hsl(234, 11%, 52%);
+}
+
+header {
+  background-image: url("./images/bg-mobile-light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: -20px;
+  height: 24vh;
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  max-width: 38rem;
+}
+header h1 {
+  color: hsl(0, 0%, 98%);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  margin-top: 2.5rem;
+}
+header img {
+  height: 1.5rem;
+  width: 2rem;
+}
+header form {
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  margin: auto;
+  width: 80%;
+  border-radius: 0.5rem;
+  display: flex;
+  position: relative;
+  bottom: 2rem;
+  max-width: 38rem;
+}
+header form button {
+  margin-right: 0.5rem;
+}
+header form input {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  padding: 0%;
+  margin: 0;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+}
+
+.todo {
+  background-color: white;
+  width: 88vw;
+  max-width: 38rem;
+  margin: auto;
+  border-radius: 6px;
+  font-size: 14px;
+  position: relative;
+  bottom: 3rem;
+}
+.todo .main-item {
+  min-height: 3.5rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: 1px solid hsl(234, 11%, 52%);
+  margin-left: -2.5rem;
+  cursor: move;
+}
+.todo .main-item p {
+  display: flex;
+  align-items: center;
+}
+.todo .do {
+  margin-left: 1rem;
+}
+.todo .checked {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
+.todo .checked .do {
+  background: url("images/icon-check.svg"), linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.todo .delete {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.todo .filters {
+  text-transform: capitalize;
+  display: none;
+}
+.todo #clearCompleted,
+.todo .items > p {
+  text-transform: capitalize;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+}
+.items button,
+.items p {
+  color: hsl(234, 11%, 52%);
+  margin: 1rem;
+  position: relative;
+  bottom: 25%;
+}
+.items p {
+  margin-top: 1rem;
+}
+
+.do {
+  border: 1px solid hsl(234, 11%, 52%);
+  outline: none;
+  background-color: transparent;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  display: inline;
+  margin-left: 1rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: inherit;
+}
+
+.do:focus,
+.do:active,
+.do:hover {
+  border: 2px solid blue;
+}
+
+.active {
+  color: hsl(220, 98%, 61%) !important;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+aside {
+  background-color: white;
+  width: 88vw;
+  min-width: 88vw;
+  margin: auto;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 3rem;
+}
+aside button {
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: hsl(233, 14%, 35%);
+  margin: 0.5rem;
+}
+aside :hover:not(.active) {
+  color: hsl(220, 98%, 61%);
+  opacity: 0.8;
+  border: none !important;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: hsl(234, 11%, 52%);
+  position: relative;
+  bottom: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .dark header {
+    background-image: url("./images/bg-desktop-dark.jpg");
+  }
+  .light header {
+    background-image: url("./images/bg-desktop-light.jpg");
+  }
+  header {
+    height: 35vh;
+  }
+  header section {
+    margin: auto;
+    position: relative;
+    top: 2rem;
+  }
+  header form {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 4rem;
+  }
+  header form .do {
+    margin-left: 1rem;
+  }
+  .todo .main-item {
+    font-size: 18px;
+  }
+  .todo .main-item button:not(.do) {
+    display: none;
+  }
+  .visible {
+    display: initial !important;
+  }
+}/*# sourceMappingURL=styles.css.map */
