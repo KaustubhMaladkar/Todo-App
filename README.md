@@ -41,8 +41,8 @@ Users can:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My Solution]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/mobile-first-solution-to-todo-app-using-flexbox-scss-and-localstorage-monQFfG1gz))
+- Live Site URL: [Live Site](https://kaustubhmaladkar.github.io/Todo-App/)
 
 ## My process
 
