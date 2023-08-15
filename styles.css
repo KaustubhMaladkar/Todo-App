@@ -20,7 +20,7 @@ body {
 .dark input,
 .dark aside {
   color: hsl(0, 0%, 98%);
-  background-color: hsl(237, 14%, 26%);
+  background-color: hsl(235, 21%, 11%);
 }
 .dark .todo ::-moz-placeholder, .dark form ::-moz-placeholder, .dark input ::-moz-placeholder, .dark aside ::-moz-placeholder {
   color: hsl(0, 0%, 98%);

@@ -50,7 +50,7 @@ body {
   form,
   input,
   aside {
-    @include colorScheme($very-light-grey, $very-dark-grayish-blue-2);
+    @include colorScheme($very-light-grey, $very-dark-blue);
 
     ::placeholder {
       color: $very-light-grey;
