@@ -41,7 +41,7 @@ Users can:
 
 ### Links
 
-- Solution URL: [My Solution]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/mobile-first-solution-to-todo-app-using-flexbox-scss-and-localstorage-monQFfG1gz))
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/mobile-first-solution-to-todo-app-using-flexbox-scss-and-localstorage-wsNzofvrw7)
 - Live Site URL: [Live Site](https://kaustubhmaladkar.github.io/Todo-App/)
 
 ## My process
