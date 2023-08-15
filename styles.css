@@ -41,7 +41,7 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   margin-top: -20px;
-  height: 24vh;
+  padding-bottom: 2.5rem;
 }
 header section {
   display: flex;
@@ -70,9 +70,8 @@ header form {
   width: 80%;
   border-radius: 0.5rem;
   display: flex;
-  position: relative;
-  bottom: 2rem;
   max-width: 38rem;
+  margin-bottom: 1rem;
 }
 header form button {
   margin-right: 0.5rem;
@@ -88,6 +87,10 @@ header form input {
   font-size: inherit;
   width: 100%;
 }
+header form:focus,
+header form:active {
+  border: 2px solid blue;
+}
 
 .todo {
   background-color: white;
@@ -96,8 +99,9 @@ header form input {
   margin: auto;
   border-radius: 6px;
   font-size: 14px;
-  position: relative;
-  bottom: 3rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  margin-top: -2rem;
 }
 .todo .main-item {
   min-height: 3.5rem;
@@ -210,7 +214,7 @@ aside {
   margin: auto;
   border-radius: 6px;
   font-size: 14px;
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
@@ -246,7 +250,7 @@ footer {
     background-image: url("./images/bg-desktop-light.jpg");
   }
   header {
-    height: 35vh;
+    max-height: 16.5rem;
   }
   header section {
     margin: auto;
@@ -260,6 +264,9 @@ footer {
   }
   header form .do {
     margin-left: 1rem;
+  }
+  .todo {
+    margin-bottom: 3rem;
   }
   .todo .main-item {
     font-size: 18px;

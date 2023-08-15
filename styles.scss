@@ -68,7 +68,7 @@ header {
   background-size: cover;
   @include background();
   margin-top: -20px;
-  height: 24vh;
+  padding-bottom: 2.5rem;
 
   section {
     display: flex;
@@ -100,9 +100,8 @@ header {
     width: 80%;
     border-radius: 0.5rem;
     display: flex;
-    position: relative;
-    bottom: 2rem;
     max-width: 38rem;
+    margin-bottom: 1rem;
 
     button {
       margin-right: 0.5rem;
@@ -120,6 +119,10 @@ header {
       width: 100%;
     }
   }
+  form:focus,
+  form:active {
+    border: 2px solid blue;
+  }
 }
 
 // --------------------------------TODO LIST-------------------------------
@@ -130,8 +133,9 @@ header {
   margin: auto;
   border-radius: 6px;
   font-size: 14px;
-  position: relative;
-  bottom: 3rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  margin-top: -2rem;
 
   .main-item {
     min-height: 3.5rem;
@@ -255,7 +259,7 @@ aside {
   margin: auto;
   border-radius: 6px;
   font-size: 14px;
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
@@ -300,7 +304,7 @@ footer {
   }
 
   header {
-    height: 35vh;
+    max-height: 16.5rem;
 
     section {
       margin: auto;
@@ -320,6 +324,7 @@ footer {
   }
 
   .todo {
+    margin-bottom: 3rem;
     .main-item {
       font-size: 18px;
 

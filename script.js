@@ -43,7 +43,19 @@ FORM.addEventListener("submit", (e) => {
   INPUT.value = "";
 });
 
-new Sortable(TODO_LIST, { animation: 350 });
+new Sortable(TODO_LIST, {
+  animation: 350,
+  onEnd: function () {
+    list = [...getListItems()].map((item) => {
+      const newItem = {
+        value: item.innerText,
+        checked: [...item.classList].includes("checked"),
+      };
+      return newItem;
+    });
+    setList();
+  },
+});
 
 function createNewItem(val, checked = false) {
   const listItem = document.createElement("li");
@@ -56,17 +68,6 @@ function createNewItem(val, checked = false) {
     <img src="./images/icon-cross.svg" alt="delete" />
   </button>`;
   TODO_LIST.appendChild(listItem);
-
-  listItem.addEventListener("drop", () => {
-    list = [...getListItems()].map((item) => {
-      const newItem = {
-        value: item.innerText,
-        checked: [...item.classList].includes("checked"),
-      };
-      return newItem;
-    });
-    setList();
-  });
 
   setAndCallFilters();
   if ([...completedFilter.classList].includes("active"))
@@ -178,7 +179,7 @@ function setTheme() {
   const theme = () => {
     return localStorage.getItem("theme")
       ? localStorage.getItem("theme")
-      : "light";
+      : "dark";
   };
   THE_BODY.className = "";
   THE_BODY.classList.add(theme());
