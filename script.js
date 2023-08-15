@@ -19,6 +19,7 @@ let allFilter;
 
 resize();
 setTheme();
+setAndCallFilters();
 window.addEventListener("resize", () => resize());
 if (localStorage.getItem("list")) {
   list = JSON.parse(localStorage.getItem("list"));
@@ -118,6 +119,7 @@ allFilter.addEventListener("click", () => {
   getListItems().forEach((item) => item.classList.replace("invisible", "flex"));
   addActiveClass(allFilter);
 });
+
 completedFilter.addEventListener("click", () =>
   filter("flex", "invisible", completedFilter)
 );
