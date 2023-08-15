@@ -52,7 +52,7 @@ Users can:
 - Flexbox
 - Mobile-first workflow
 - JavaScript LocalStorage
-- [Sortabl JS](https://sortablejs.github.io/Sortable/) - For reordering the list
+- [Sortable JS](https://sortablejs.github.io/Sortable/) - For reordering the list
 - [SASS](https://sass-lang.com/) - For styles
 
 ### What I learned
@@ -85,6 +85,8 @@ arr.map();
 ### Useful resources
 
 - Thanks to [dotancohen](https://stackoverflow.com/users/343302/dotancohen) for their answer on [this Stackoverflow question](https://stackoverflow.com/questions/9264835/how-to-align-an-input-tag-to-the-center-without-specifying-the-width)
+
+-Thanks to [Yves Kipondo](https://stackoverflow.com/users/6108283/yves-kipondo) for their answer on [this Stackoverflow question](https://stackoverflow.com/questions/52554613/html-5-drag-and-drop-not-working-on-mobile-screen)
 
 - [This article](https://css-tricks.com/almanac/selectors/p/placeholder/) on css-tricks.com helped me understand how to target the placeholder of my input in order to style it
 
