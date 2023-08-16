@@ -87,8 +87,8 @@ header form input {
   font-size: inherit;
   width: 100%;
 }
-header form:focus,
-header form:active {
+header input:focus,
+header input:active {
   border: 2px solid blue;
 }
 

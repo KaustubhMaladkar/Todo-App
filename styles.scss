@@ -119,8 +119,8 @@ header {
       width: 100%;
     }
   }
-  form:focus,
-  form:active {
+  input:focus,
+  input:active {
     border: 2px solid blue;
   }
 }
