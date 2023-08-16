@@ -81,6 +81,10 @@ arr.map();
 - LocalStorage
 - Arrays
 - Accessibility
+- Improve the focus states
+- Add a 'delete all' button
+- Add an 'undo' button
+- Add an option to edit a list item
 
 ### Useful resources
 
